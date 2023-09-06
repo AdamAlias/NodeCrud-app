@@ -1,4 +1,5 @@
 {
+  "homepage": "https://adamalias.github.io/NodeCrud-app/",
   "name": "nodejsproject",
   "version": "1.0.0",
   "description": "",
@@ -7,12 +8,17 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "server": "npm start --prefix backend",
     "client": "npm  start --prefix frontend",
-    "dev": "concurrently \"npm run server\" \"npm run client\""
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
     "concurrently": "^8.2.1"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.0.0"
   }
 }
